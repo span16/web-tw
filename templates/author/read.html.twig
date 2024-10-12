@@ -1,0 +1,35 @@
+{#{dump(authors)}#}
+<table border="1">
+<tr>
+<th> id</th>
+ 
+<th>username</th>
+<th>email</th>
+<th>ACTIONS</th>
+
+</tr>
+{% for author in authors %}
+<tr>
+<td>{{author.id}}</td>
+<td>{{author.username}}</td>
+<td>{{author.email}}</td>
+ <td><a href="{{path('app_delete',{'id':author.id})}}">delete</a></td>
+ <td><a href="{{path('update',{'id':author.id})}}">update</a></td>
+
+</tr>
+
+ 
+{% endfor %}
+
+
+{% for label, messages in app.flashes %}
+    <div class="alert alert-{{ label }}">
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+</table>
+ <td><a href="{{path('app_ajout')}}">ajout</a></td>
+

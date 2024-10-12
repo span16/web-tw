@@ -1,0 +1,17 @@
+{# <h1>Author : {{ name }}</h1> #}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Détails de l'Auteur</title>
+</head>
+<body>
+    <h1>Détails de l'Auteur</h1>
+
+    <p><img src="{{ author.picture }}" alt="{{ author.username }}" style="width:200px;height:auto;"></p>
+    <p>Nom d'utilisateur : {{ author.username }}</p>
+    <p>Email : {{ author.email }}</p>
+    <p>Nombre de livres : {{ author.nb_books }}</p>
+
+    <a href="{{ path('list_authors') }}">Retour à la liste des auteurs</a>
+</body>
+</html>
