@@ -1,0 +1,26 @@
+<!-- templates/aeroport/list.html.twig -->
+
+<h1>List of Airports</h1>
+
+<table border=1px>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for aeroport in aeroports %}
+            <tr>
+                <td>{{ aeroport.id }}</td>
+                <td>{{ aeroport.nom }}</td>
+                <td>{{ aeroport.ville }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">No airports found.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

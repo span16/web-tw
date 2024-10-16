@@ -1,0 +1,17 @@
+
+
+<h1>Add a New Airport</h1>
+
+{{ form_start(form) }}
+    <div>
+        {{ form_label(form.nom) }}
+        {{ form_widget(form.nom) }}
+    </div>
+    
+    <div>
+        {{ form_label(form.ville) }}
+        {{ form_widget(form.ville) }}
+    </div>
+    
+    <button class="btn btn-primary">Submit</button>
+{{ form_end(form) }}
