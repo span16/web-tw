@@ -16,6 +16,8 @@
                 <td>{{ aeroport.id }}</td>
                 <td>{{ aeroport.nom }}</td>
                 <td>{{ aeroport.ville }}</td>
+<td><a href="{{path('app_aeroport_edit', {'id': aeroport.id})}}">update</a></td>
+ <td><a href="{{path('app_aeroport_new', {'id': aeroport.id})}}">create</a></td>
             </tr>
         {% else %}
             <tr>

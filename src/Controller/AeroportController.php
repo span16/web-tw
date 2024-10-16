@@ -47,7 +47,7 @@ class AeroportController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-    #[Route('/aeroport/{id}/edit', name: 'app_aeroport_edit')]
+  #[Route('/aeroport/{id}/edit', name: 'app_aeroport_edit')]
     public function edit(Aeroport $aeroport, Request $request, EntityManagerInterface $entityManager): Response
     {
         $form = $this->createForm(AeroportType::class, $aeroport);
